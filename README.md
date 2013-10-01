@@ -1,10 +1,4 @@
 eVenture
 ========
 
-This is a test
-A choose your own adventure android app
-afafadfdaf
-
-blah
-
-This should be working  form MASTER Ying.
+A choose your own adventure android app that allows a users to read an interactive book.  This app enhances a users experience with book reading.
