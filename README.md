@@ -5,3 +5,5 @@ A choose your own adventure android book app that allows users to read an intera
 
 
 This is from Shon. Another test. 
+
+current background is a temp, any suggestions to a new background can be forwarded to me. - John
