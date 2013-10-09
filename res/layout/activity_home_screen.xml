@@ -18,6 +18,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="104dp"
         android:layout_marginTop="21dp"
+        android:onClick="toLibrary"
         android:text="@string/Library" />
 
     <Button
