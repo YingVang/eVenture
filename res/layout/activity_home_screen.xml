@@ -10,25 +10,24 @@
     tools:context=".HomeScreen" >
 
     <Button
-        android:id="@+id/Library"
+        android:id="@+id/glTest"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="104dp"
-        android:layout_marginTop="21dp"
-        android:onClick="toLibrary"
-        android:text="@string/Library" />
+        android:text="@string/glTest" />
 
+    <!-- this is the "Library" button, onClick it commands a switch to the library activity -->
     <Button
-        android:id="@+id/glTest"
+        android:id="@+id/Library"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/Library"
-        android:layout_below="@+id/Library"
-        android:layout_marginTop="34dp"
-        android:text="@string/glTest" />
+        android:layout_alignBaseline="@+id/glTest"
+        android:layout_alignBottom="@+id/glTest"
+        android:layout_alignParentRight="true"
+        android:onClick="toLibrary"
+        android:text="@string/library" />
 
 </RelativeLayout>

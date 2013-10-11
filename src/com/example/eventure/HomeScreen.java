@@ -21,6 +21,7 @@ public class HomeScreen extends Activity {
 		return true;
 	}
 	
+	//public void toLibrary() is a method that gives the button "Library" the command to switch to the Library activity.
 	public void toLibrary(View V){
 		startActivity(new Intent(HomeScreen.this, Library.class));
 	}
