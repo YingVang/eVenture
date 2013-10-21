@@ -30,4 +30,13 @@
         android:onClick="toLibrary"
         android:text="@string/library" />
 
+    <!-- this is the "continue" button, onClick it commands a switch to reading mode, where the user continues where they last were -->
+    <Button
+        android:id="@+id/continue_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/Library"
+        android:text="@string/continue_button" />
+
 </RelativeLayout>
