@@ -20,4 +20,13 @@
         android:onClick="toHome"
         android:text="@string/home_button" />
 
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/homeButtonFromLib"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
 </RelativeLayout>
