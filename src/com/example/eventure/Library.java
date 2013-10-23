@@ -58,5 +58,17 @@ public class Library extends Activity {
 	public void toHome(View V){
 		startActivity(new Intent(Library.this, HomeScreen.class));
 	}
+	
+	// Basic Insertion sort, to be used in sorting portion of library activity
+	// public void insertion_sort(Type data){
+	// 		for (int i = 1; i < data.length; i++) {
+	//			int temp = data[i];
+	//			int j;
+	//			for (j = i - 1; j >= 0 && temp < a[j]; j--)
+	//				data[j + 1] = data[j];
+	//			data[j + 1] = temp;
+	//		}
+	// }
 
+	
 }
