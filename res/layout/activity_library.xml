@@ -19,7 +19,9 @@
         android:layout_alignParentTop="true"
         android:onClick="toHome"
         android:text="@string/home_button" />
-
+    
+    
+	<!-- this is the text box to be used for search in the library activity -->
     <EditText
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
