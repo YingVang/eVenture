@@ -1,21 +1,21 @@
 
 public class StoryInfo {
-	private string author;
-	private string title;
-	private string dateWritten;
+	private String author;
+	private String title;
+	private String dateWritten;
 	
 	//setters and getters 
-	public string getAuthor(){return author;}
+	public String getAuthor(){return author;}
 	
-	public string getTitle(){return title;}
+	public String getTitle(){return title;}
 	
-	public string getDateWritten(){return dateWritten;}
+	public String getDateWritten(){return dateWritten;}
 	
-	private string setAuthor(string a){author=a;}
+	private void setAuthor(String a){author=a;}
 	
-	private string setTitle(string t){title=t;}
+	private void setTitle(String t){title=t;}
 	
-	private string setDateWritten(string d){dateWritten=d;}
+	private void setDateWritten(String d){dateWritten=d;}
 	
 	
 	
