@@ -31,4 +31,14 @@
         android:ems="10"
         android:inputType="textPersonName" />
 
+    <ListView
+        android:id="@+id/listView1"
+        android:background="@drawable/white_background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignLeft="@+id/homeButtonFromLib"
+        android:layout_below="@+id/homeButtonFromLib" >
+
+    </ListView>
+
 </RelativeLayout>
