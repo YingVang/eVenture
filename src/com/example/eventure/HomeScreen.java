@@ -1,5 +1,6 @@
 package com.example.eventure;
 
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -20,6 +21,11 @@ public class HomeScreen extends Activity {
 		getMenuInflater().inflate(R.menu.home_screen, menu);
 		return true;
 	}
+	
+	public void toStoryView(View V){
+		startActivity(new Intent(HomeScreen.this, StoryView.class));
+	}
+
 	
 	//public void toLibrary() is a method that gives the button "Library" the command to switch to the Library activity.
 	public void toLibrary(View V){

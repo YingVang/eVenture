@@ -51,6 +51,7 @@ public final class R {
         public static final int glTest=0x7f050003;
         public static final int home_button=0x7f050006;
         public static final int library=0x7f050002;
+        public static final int title_activity_StoryView=0x7f050007;
         public static final int title_activity_library=0x7f050005;
     }
     public static final class style {

@@ -8,5 +8,6 @@
     <string name="continue_button">Continue</string>
     <string name="title_activity_library">Library</string>
     <string name="home_button">Home</string>
+    <string name="title_activity_StoryView">StoryView</string>
 
 </resources>
