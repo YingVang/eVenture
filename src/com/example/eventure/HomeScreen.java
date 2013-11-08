@@ -1,5 +1,6 @@
 package com.example.eventure;
 
+//test comment
 
 import android.os.Bundle;
 import android.app.Activity;
