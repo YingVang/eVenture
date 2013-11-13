@@ -1,18 +1,20 @@
 package com.example.eventure;
 
+import android.R;
 import android.annotation.TargetApi;
 import android.app.ListActivity;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class Library extends ListActivity {
+public class Library extends ListActivity{
 
 	
 	// Stories array
@@ -69,8 +71,9 @@ public class Library extends ListActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.library, menu);
-		return true;
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.eventure_actionbar, menu);
+		return (super.onCreateOptionsMenu(menu));
 	}
 
 	@Override
