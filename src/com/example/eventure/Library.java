@@ -1,23 +1,59 @@
 package com.example.eventure;
 
+import android.annotation.TargetApi;
+import android.app.ListActivity;
+import android.os.Build;
 import android.os.Bundle;
-import android.app.Activity;
+import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.support.v4.app.NavUtils;
-import android.annotation.TargetApi;
-import android.content.Intent;
-import android.os.Build;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
 
-public class Library extends Activity {
+public class Library extends ListActivity {
 
+	
+	// Stories array
+	String [] Stories = {
+			"Story 1",
+			"Story 2",
+			"Story 3",
+			"Story 4",
+			"Story 5",
+			"Story 6",
+			"Story 7",
+			"Story 8",
+			"Story 9",
+			"Story 10",
+			"Story 11",
+			"Story 12",
+			"Story 13",
+			"Story 14",
+			"Story 15",
+			"Story 16",
+			"Story 17",
+			"Story 18",
+			"Story 19",
+			"Story 20"
+	};
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_library);
+		// setContentView(R.layout.activity_library);
 		// Show the Up button in the action bar.
 		setupActionBar();
+		
+		// setting data from Stories array into list
+		setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Stories));
+	}
+	
+	public void onListItemClick(ListView parent, View v, int position, long id){
+		
+		Toast.makeText(this, "You have selected " + Stories[position] + " enjoy your adventure!", Toast.LENGTH_LONG).show();
+		
 	}
 
 	/**
@@ -53,22 +89,4 @@ public class Library extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-	
-	//public void toHome() is a method that gives the "Home" button the command to switch to the HomeScreen activity.
-	public void toHome(View V){
-		startActivity(new Intent(Library.this, HomeScreen.class));
-	}
-	
-	// Basic Insertion sort, to be used in sorting portion of library activity
-	// public void insertion_sort(Type data){
-	// 		for (int i = 1; i < data.length; i++) {
-	//			int temp = data[i];
-	//			int j;
-	//			for (j = i - 1; j >= 0 && temp < a[j]; j--)
-	//				data[j + 1] = data[j];
-	//			data[j + 1] = temp;
-	//		}
-	// }
-
-	
 }
