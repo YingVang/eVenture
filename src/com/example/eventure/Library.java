@@ -1,6 +1,5 @@
 package com.example.eventure;
 
-import android.R;
 import android.annotation.TargetApi;
 import android.app.ListActivity;
 import android.os.Build;
