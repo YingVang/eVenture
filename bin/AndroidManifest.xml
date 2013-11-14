@@ -23,7 +23,8 @@
         
         <activity
             android:name="com.example.eventure.HomeScreen"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,7 +35,8 @@
         <activity
             android:name="com.example.eventure.Library"
             android:label="@string/title_activity_library"
-            android:parentActivityName="com.example.eventure.HomeScreen" >
+            android:parentActivityName="com.example.eventure.HomeScreen"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.eventure.HomeScreen" />
@@ -43,7 +45,8 @@
         <activity
             android:name="com.example.eventure.StoryView"
             android:label="@string/title_activity_StoryView"
-            android:parentActivityName="com.example.eventure.HomeScreen" >
+            android:parentActivityName="com.example.eventure.HomeScreen"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.eventure.HomeScreen" />
