@@ -29,15 +29,17 @@ public final class R {
     }
     public static final class id {
         public static final int Library=0x7f080001;
-        public static final int action_library=0x7f080003;
-        public static final int action_search=0x7f080004;
-        public static final int action_settings=0x7f080005;
+        public static final int action_library=0x7f080004;
+        public static final int action_search=0x7f080005;
+        public static final int action_settings=0x7f080006;
         public static final int continue_button=0x7f080002;
+        public static final int glSurface=0x7f080003;
         public static final int glTest=0x7f080000;
     }
     public static final class layout {
         public static final int activity_home_screen=0x7f030000;
         public static final int activity_library=0x7f030001;
+        public static final int story_view=0x7f030002;
     }
     public static final class menu {
         public static final int eventure_actionbar=0x7f070000;
