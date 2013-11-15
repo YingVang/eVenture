@@ -9,35 +9,39 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".HomeScreen" >
 
+    <!-- this is the "Library" button, onClick it commands a switch to the library activity -->
+
+    <!-- this is the "continue" button, onClick it commands a switch to reading mode, where the user continues where they last were -->
+
     <Button
         android:id="@+id/glTest"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/Library"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
         android:onClick="toStoryView"
         android:text="@string/glTest" />
 
-    <!-- this is the "Library" button, onClick it commands a switch to the library activity -->
     <Button
         android:id="@+id/Library"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/glTest"
-        android:layout_alignBottom="@+id/glTest"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
         android:onClick="toLibrary"
         android:text="@string/library" />
 
-    <!-- this is the "continue" button, onClick it commands a switch to reading mode, where the user continues where they last were -->
     <Button
         android:id="@+id/continue_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/Library"
+        android:layout_alignLeft="@+id/glTest"
+        android:layout_below="@+id/glTest"
+        android:layout_marginTop="55dp"
         android:text="@string/continue_button" />
 
 </RelativeLayout>
