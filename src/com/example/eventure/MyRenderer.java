@@ -23,10 +23,11 @@ import android.content.Context;
 import android.opengl.GLSurfaceView.Renderer;
 
 public class MyRenderer implements Renderer {
+	private int x=50, y=50;
 	
 	private Context context;
-	private int zoomX = 320;
-	private int zoomY = 480;
+	private int zoomX = 320;  
+	private int zoomY = 480;  
 	
 	private LoadSprite ninjaSprite = new LoadSprite();
 	
@@ -39,13 +40,25 @@ public class MyRenderer implements Renderer {
 		gl.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
 		
 		GL_Prepare(gl);
-		//Game Draw
+		//Draw
 		
-		ninjaSprite.Draw(gl, 60, 60, 150, 150);
+		ninjaSprite.Draw(gl, x, y, 80, 80);
 		
-		//End Game Draw
+		//End Draw
 		GL_Finished(gl);
+		x++;
+		if (x>=200){
+			x=200;
+			y++;
+		}
+		if (y>=320){
+			y=320;
+			y--;
+		}
+		
+		
 	}
+	
 
 	@Override
 	public void onSurfaceChanged(GL10 gl, int width, int height) {
@@ -65,7 +78,7 @@ public class MyRenderer implements Renderer {
 		
 		gl.glEnable(GL10.GL_TEXTURE_2D);
 		gl.glShadeModel(GL10.GL_SMOOTH);
-		gl.glClearColor(0.0f, 0.5f, 0.0f, 1.0f);
+		gl.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 		gl.glClearDepthf(1.0f);
 		gl.glEnable(GL10.GL_DEPTH_TEST);
 		gl.glDepthFunc(GL10.GL_LEQUAL);
@@ -74,7 +87,7 @@ public class MyRenderer implements Renderer {
 	private void GL_Prepare(GL10 gl){
 		gl.glEnable(GL10.GL_TEXTURE_2D);
 		gl.glShadeModel(GL10.GL_SMOOTH);
-		gl.glClearColor(0.0f, 0.5f, 0.1f, 1.0f);
+		gl.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 		gl.glClearDepthf(1.0f);
 		gl.glEnable(GL10.GL_DEPTH_TEST);
 		gl.glDepthFunc(GL10.GL_LEQUAL);
