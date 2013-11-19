@@ -2,6 +2,7 @@ package com.example.eventure;
 
 import android.annotation.TargetApi;
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -51,10 +52,17 @@ public class Library extends ListActivity{
 		setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Stories));
 	}
 	
-	public void onListItemClick(ListView parent, View v, int position, long id){
+	public void onListItemClick(ListView list, View v, int position, long id){
 		
-		Toast.makeText(this, "You have selected " + Stories[position] + " enjoy your adventure!", Toast.LENGTH_LONG).show();
-		
+		super.onListItemClick(list, v, position, id);
+		String storyName = Stories[position];		
+		try{
+			Class selected = Class.forName("com.example.eventure." + storyName);
+			Intent selectedIntent = new Intent(this, selected);
+			startActivity(selectedIntent);
+		} catch (ClassNotFoundException e){
+			e.printStackTrace();
+		}
 	}
 
 	/**
