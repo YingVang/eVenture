@@ -31,6 +31,8 @@ public class MyRenderer implements Renderer {
 	
 	private LoadSprite ninjaSprite = new LoadSprite();
 	
+	
+	
 	public MyRenderer(Context context){
 		this.context = context;
 	}
@@ -42,18 +44,17 @@ public class MyRenderer implements Renderer {
 		GL_Prepare(gl);
 		//Draw
 		
-		ninjaSprite.Draw(gl, x, y, 80, 80);
-		
+		ninjaSprite.Draw(gl, x, y, 65, 65);
+	
 		//End Draw
 		GL_Finished(gl);
 		x++;
 		if (x>=200){
-			x=200;
-			y++;
-		}
-		if (y>=320){
-			y=320;
-			y--;
+			y=y+20;
+			x=50;
+			if (y>=400){
+				y=400;
+			}
 		}
 		
 		
@@ -78,7 +79,7 @@ public class MyRenderer implements Renderer {
 		
 		gl.glEnable(GL10.GL_TEXTURE_2D);
 		gl.glShadeModel(GL10.GL_SMOOTH);
-		gl.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+		gl.glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 		gl.glClearDepthf(1.0f);
 		gl.glEnable(GL10.GL_DEPTH_TEST);
 		gl.glDepthFunc(GL10.GL_LEQUAL);
@@ -87,7 +88,7 @@ public class MyRenderer implements Renderer {
 	private void GL_Prepare(GL10 gl){
 		gl.glEnable(GL10.GL_TEXTURE_2D);
 		gl.glShadeModel(GL10.GL_SMOOTH);
-		gl.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+		gl.glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 		gl.glClearDepthf(1.0f);
 		gl.glEnable(GL10.GL_DEPTH_TEST);
 		gl.glDepthFunc(GL10.GL_LEQUAL);
