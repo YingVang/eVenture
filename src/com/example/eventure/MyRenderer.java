@@ -23,13 +23,15 @@ import android.content.Context;
 import android.opengl.GLSurfaceView.Renderer;
 
 public class MyRenderer implements Renderer {
-	private int x=50, y=50;
+	private int x=0, y=0,a=0,b=350;
 	
 	private Context context;
 	private int zoomX = 320;  
 	private int zoomY = 480;  
 	
+	private LoadSprite background = new LoadSprite();
 	private LoadSprite ninjaSprite = new LoadSprite();
+	
 	
 	
 	
@@ -43,15 +45,21 @@ public class MyRenderer implements Renderer {
 		
 		GL_Prepare(gl);
 		//Draw
+		background.Draw(gl, a, b, 320,  350 );
+		ninjaSprite.Draw(gl, x, y, 9, 18);
 		
-		ninjaSprite.Draw(gl, x, y, 65, 65);
+		
 	
 		//End Draw
 		GL_Finished(gl);
+		
+	    if(b>0) b--;
+		
+	
 		x++;
-		if (x>=200){
-			y=y+20;
-			x=50;
+		if (x>=300){
+			y=y+13;
+			x=0;
 			if (y>=400){
 				y=400;
 			}
@@ -75,7 +83,8 @@ public class MyRenderer implements Renderer {
 	@Override
 	public void onSurfaceCreated(GL10 gl, EGLConfig arg1) {
 		//load
-		ninjaSprite.LoadAsset(gl, context, "ninja.png");
+		background.LoadAsset(gl, context, "TestText2.png");
+		//ninjaSprite.LoadAsset(gl, context, "ninja.png");
 		
 		gl.glEnable(GL10.GL_TEXTURE_2D);
 		gl.glShadeModel(GL10.GL_SMOOTH);
@@ -83,8 +92,9 @@ public class MyRenderer implements Renderer {
 		gl.glClearDepthf(1.0f);
 		gl.glEnable(GL10.GL_DEPTH_TEST);
 		gl.glDepthFunc(GL10.GL_LEQUAL);
+		
 	}
-	
+
 	private void GL_Prepare(GL10 gl){
 		gl.glEnable(GL10.GL_TEXTURE_2D);
 		gl.glShadeModel(GL10.GL_SMOOTH);
