@@ -19,7 +19,7 @@ public class Library extends ListActivity{
 	
 	// Stories array
 	String [] Stories = {
-			"Story 1",
+			"StoryView",
 			"Story 2",
 			"Story 3",
 			"Story 4",

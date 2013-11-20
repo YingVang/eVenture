@@ -13,16 +13,7 @@
 
     <!-- this is the "continue" button, onClick it commands a switch to reading mode, where the user continues where they last were -->
 
-    <Button
-        android:id="@+id/glTest"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Library"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="46dp"
-        android:onClick="toStoryView"
-        android:text="@string/glTest" />
+  
 
     <Button
         android:id="@+id/Library"
@@ -39,9 +30,9 @@
         android:id="@+id/continue_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/glTest"
-        android:layout_below="@+id/glTest"
-        android:layout_marginTop="55dp"
+        android:layout_below="@+id/Library"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
         android:text="@string/continue_button" />
 
 </RelativeLayout>

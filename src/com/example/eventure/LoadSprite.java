@@ -37,7 +37,7 @@ public class LoadSprite {
 			uv1[1], uv0[1],
 		};
 	
-	private int[] textures = new int[1];
+	private int[] textures = new int[2];
 	
 	public LoadSprite()
 	{
@@ -92,6 +92,7 @@ public class LoadSprite {
 	private void draw(GL10 gl)
 	{
 		gl.glBindTexture(GL10.GL_TEXTURE_2D, textures[0]);
+		gl.glBindTexture(GL10.GL_TEXTURE_2D, textures[1]);
 		gl.glVertexPointer(3, GL10.GL_FLOAT, 0, vertexBuffer);
 		gl.glTexCoordPointer(2, GL10.GL_FLOAT, 0, uvCoordBuffer.position(0));
 		
