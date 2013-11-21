@@ -23,19 +23,27 @@ public final class R {
     public static final class drawable {
         public static final int background=0x7f020000;
         public static final int background2=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int img_list=0x7f020003;
-        public static final int library_back=0x7f020004;
-        public static final int white_background=0x7f020005;
+        public static final int boat1=0x7f020002;
+        public static final int boat16=0x7f020003;
+        public static final int boat2=0x7f020004;
+        public static final int boat3=0x7f020005;
+        public static final int boat4=0x7f020006;
+        public static final int boat5=0x7f020007;
+        public static final int boat6=0x7f020008;
+        public static final int boat7=0x7f020009;
+        public static final int ic_launcher=0x7f02000a;
+        public static final int img_list=0x7f02000b;
+        public static final int library_back=0x7f02000c;
+        public static final int white_background=0x7f02000d;
+        public static final int younghero=0x7f02000e;
     }
     public static final class id {
         public static final int Library=0x7f080001;
-        public static final int action_library=0x7f080004;
-        public static final int action_search=0x7f080005;
-        public static final int action_settings=0x7f080006;
-        public static final int continue_button=0x7f080002;
+        public static final int action_library=0x7f080003;
+        public static final int action_search=0x7f080004;
+        public static final int action_settings=0x7f080005;
         public static final int gif_img=0x7f080000;
-        public static final int glSurface=0x7f080003;
+        public static final int glSurface=0x7f080002;
     }
     public static final class layout {
         public static final int activity_home_screen=0x7f030000;

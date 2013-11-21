@@ -18,26 +18,20 @@
         android:layout_alignParentTop="true" />
   
 <!-- this is the "Library" button, onClick it commands a switch to the library activity -->
+
+<!-- this is the "continue" button, onClick it commands a switch to reading mode, where the user continues where they last were -->
+
     <Button
         android:id="@+id/Library"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp"
+        android:layout_alignBottom="@+id/gif_img"
+        android:layout_alignLeft="@+id/gif_img"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="58dp"
+        android:background="@drawable/younghero"
         android:onClick="toLibrary"
         android:text="@string/library" />
-
-<!-- this is the "continue" button, onClick it commands a switch to reading mode, where the user continues where they last were -->
-
-    <Button
-        android:id="@+id/continue_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Library"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="126dp"
-        android:text="@string/continue_button" />
 
 </RelativeLayout>

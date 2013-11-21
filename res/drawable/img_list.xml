@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false" >
     
-    <item android:drawable="@drawable/background" android:duration="10000" />
-    <item android:drawable="@drawable/background2" android:duration="10000" />
-    <item android:drawable="@drawable/library_back" android:duration="10000" />
+    <item android:drawable="@drawable/boat1" android:duration="300" />
+    <item android:drawable="@drawable/boat2" android:duration="300" />
+    <item android:drawable="@drawable/boat3" android:duration="300" />
+    <item android:drawable="@drawable/boat4" android:duration="300" />
+    <item android:drawable="@drawable/boat5" android:duration="300" />
+    <item android:drawable="@drawable/boat6" android:duration="300" />
+    <item android:drawable="@drawable/boat7" android:duration="300" />
+    <item android:drawable="@drawable/boat16" android:duration="300" />
+
     
+   
 </animation-list>
