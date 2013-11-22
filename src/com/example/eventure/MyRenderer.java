@@ -20,7 +20,6 @@ import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
 import android.content.Context;
-import android.opengl.GLSurfaceView.Renderer;
 
 public class MyRenderer implements MySurfaceView.Renderer {
 	private int x=0, y=0,a=0,b=350;

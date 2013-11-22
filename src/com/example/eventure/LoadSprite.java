@@ -18,7 +18,9 @@ public class LoadSprite {
 	private float[] uv1 = new float[2];
 	private float[] uv0 = new float[2];
 	private FloatBuffer vertexBuffer;
+	@SuppressWarnings("unused")
 	private int bitmapWidth;
+	@SuppressWarnings("unused")
 	private int bitmapHeight;
 	private float vertices[] = 
 		{

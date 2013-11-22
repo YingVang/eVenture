@@ -15,7 +15,6 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class Library extends ListActivity{
-
 	
 	// Stories array
 	String [] Stories = {
@@ -52,6 +51,7 @@ public class Library extends ListActivity{
 		setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Stories));
 	}
 	
+	@SuppressWarnings("rawtypes")
 	public void onListItemClick(ListView list, View v, int position, long id){
 		
 		super.onListItemClick(list, v, position, id);
