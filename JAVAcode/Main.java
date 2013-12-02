@@ -1,7 +1,7 @@
 import java.util.Vector;
 
 import com.example.eventure.Story;
-
+import java.io;
 
 public class Main {
 
@@ -9,7 +9,7 @@ public class Main {
 	 * @param args
 	 */
 	//Essentially the library of stories
-	Vector<Story> storylib = new Vector();
+	Vector<Story> storylib = new Vector<Story>();
 	int j=storylib.size();	
 	
 	public void sortLibByTitle(){		
@@ -23,7 +23,7 @@ public class Main {
 			for (int h = k-1; h >= 0; h--){
 				temp2 = storylib.get(h);	//the object to compare
 				//if temp2 is greater than temp than swap
-				if(temp2.getStoryInfo().getTitle() > temp.getStoryInfo().getTitle()){
+				if(temp2.getStoryInfo().getTitle().hashCode() > temp.getStoryInfo().getTitle().hashCode()){
 					storylib.set(h,temp2);	//essentially swapping objects
 					storylib.set(k,temp);	
 				}
@@ -43,7 +43,7 @@ public class Main {
 			for (int h = k-1; h >= 0; h--){
 				temp2 = storylib.get(h);	//the object to compare
 				//if temp2 is greater than temp than swap
-				if(temp2.getStoryInfo().getAuthor() > temp.getStoryInfo().getAuthor()){
+				if(temp2.getStoryInfo().getAuthor().hashCode() > temp.getStoryInfo().getAuthor().hashCode()){
 					storylib.set(h,temp2);	//essentially swapping objects
 					storylib.set(k,temp);	
 				}
@@ -63,7 +63,7 @@ public class Main {
 			for (int h = k-1; h >= 0; h--){
 				temp2 = storylib.get(h);	//the object to compare
 				//if temp2 is greater than temp than swap
-				if(temp2.getStoryInfo().getDateWritten() > temp.getStoryInfo().getDateWritten()){
+				if(temp2.getStoryInfo().getDateWritten().hashCode() > temp.getStoryInfo().getDateWritten().hashCode()){
 					storylib.set(h,temp2);	//essentially swapping objects
 					storylib.set(k,temp);	
 				}
