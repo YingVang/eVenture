@@ -23,7 +23,7 @@
 <!-- this is the "continue" button, onClick it commands a switch to reading mode, where the user continues where they last were -->
 
     <Button
-        android:id="@+id/Library"
+        android:id="@+id/button"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,5 +34,17 @@
         android:background="@drawable/younghero"
         android:onClick="toLibrary"
         android:text="@string/library" />
+
+     <Button
+         android:id="@+id/button2"
+         style="?android:attr/buttonStyleSmall"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignTop="@+id/gif_img"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="15dp"
+         android:background="@drawable/hometitle"
+         android:onClick="music"
+         android:text="@string/music" />
 
 </RelativeLayout>

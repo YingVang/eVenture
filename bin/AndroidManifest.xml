@@ -43,9 +43,9 @@
         </activity>
         
         <activity
-            android:name="com.example.eventure.StoryView"
-            android:label="@string/title_activity_StoryView"
-            android:parentActivityName="com.example.eventure.HomeScreen"
+            android:name="com.example.eventure.The_Silly_Cat"
+            android:label="@string/canvasView"
+            android:parentActivityName="com.example.eventure.Library"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

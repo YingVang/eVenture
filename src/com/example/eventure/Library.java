@@ -18,7 +18,7 @@ public class Library extends ListActivity{
 	
 	// Stories array
 	String [] Stories = {
-			"StoryView",
+			"The_Silly_Cat",
 			"Story 2",
 			"Story 3",
 			"Story 4",
@@ -43,7 +43,7 @@ public class Library extends ListActivity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		// setContentView(R.layout.activity_library);
+		
 		// Show the Up button in the action bar.
 		setupActionBar();
 		
