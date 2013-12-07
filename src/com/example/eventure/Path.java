@@ -1,3 +1,4 @@
+package com.example.eventure;
 //A Path is similar to nodes in trees
 public class Path {
 	private String text;			//either going to be string or read from file
