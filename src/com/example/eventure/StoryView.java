@@ -13,12 +13,13 @@ import android.view.SurfaceView;
 //to draw with canvas using SurfaceView, one has to
 //implement a Callback() to a holder.
 public class StoryView extends SurfaceView {
-	private Bitmap bmpSillyCat, bmpBlack, bmptext, bmpSantaCat;
+	private Bitmap bmpSillyCat, bmpBlack, bmptext, bmpSantaCat, bmpNo, bmpYes;
 	private Bitmap bmpQuestion1;
 	private SurfaceHolder holder;
 	private CanvasRendererThread renderThread;
 	private int xCat=0, yCat, xBlack, yBlack, xText, yText=0;
-	private int xSantaCat, ySantaCat, xQuestion1, yQuestion1, l;
+	private int xNo, yNo, xYes, yYes;
+	private int xSantaCat, ySantaCat, xQuestion1, yQuestion1;
 	private int textSpeed = 1;
 
 	public StoryView (Context context) {
@@ -52,8 +53,12 @@ public class StoryView extends SurfaceView {
 		bmptext=BitmapFactory.decodeResource(getResources(), R.drawable.text);
 		bmpSantaCat=BitmapFactory.decodeResource(getResources(), R.drawable.santacat);
 		bmpQuestion1=BitmapFactory.decodeResource(getResources(), R.drawable.question1);
-		xCat=40; yCat=0; xBlack=30; yBlack=1200; xText=40; yText=1200;
-		xSantaCat=30; ySantaCat=1250; xQuestion1=10; yQuestion1=1460;
+		bmpYes=BitmapFactory.decodeResource(getResources(), R.drawable.yes);
+		bmpNo=BitmapFactory.decodeResource(getResources(), R.drawable.no);
+
+		xCat=40; yCat=0; xBlack=30; yBlack=800; xText=40; yText=1200;
+		xSantaCat=30; ySantaCat=1250; xQuestion1=10; yQuestion1=760;
+		xYes=10; yYes=810; xNo=400; yNo=810;
 	}
 	
 	//This is where we do all the drawing of the sprites
@@ -64,10 +69,13 @@ public class StoryView extends SurfaceView {
 		canvas.drawBitmap(bmpSillyCat, xCat, yCat, null);
 		canvas.drawBitmap(bmpBlack, xBlack, yBlack, null);
 		canvas.drawBitmap(bmpSantaCat, xSantaCat, ySantaCat, null);
-		l=bmptext.getHeight();
-		if (yText == 500){
+		
+		if (yText<500){
+			
 			canvas.drawBitmap(bmpQuestion1, xQuestion1, yQuestion1, null);
-			yText=500;
+			canvas.drawBitmap(bmpYes, xYes, yYes, null);
+			canvas.drawBitmap(bmpNo, xNo, yNo, null);
+
 		}
 		
 		
@@ -77,11 +85,12 @@ public class StoryView extends SurfaceView {
 	@Override
     public boolean onTouchEvent(MotionEvent e) {
 
-        switch (e.getAction()) {
-            case MotionEvent.ACTION_MOVE:
-            		textSpeed = -3;
-            	yText = yText + textSpeed;      
-        }
+        int action = e.getAction();
+            if( action == MotionEvent.ACTION_DOWN){
+            		textSpeed = -20;
+            		yText = yText + textSpeed; 
+            }
+        
         return true;
     }
 

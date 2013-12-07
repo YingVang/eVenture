@@ -38,12 +38,14 @@ public final class R {
         public static final int library_back=0x7f02000e;
         public static final int libraryback=0x7f02000f;
         public static final int ninja=0x7f020010;
-        public static final int question1=0x7f020011;
-        public static final int santacat=0x7f020012;
-        public static final int silllycat=0x7f020013;
-        public static final int text=0x7f020014;
-        public static final int white_background=0x7f020015;
-        public static final int younghero=0x7f020016;
+        public static final int no=0x7f020011;
+        public static final int question1=0x7f020012;
+        public static final int santacat=0x7f020013;
+        public static final int silllycat=0x7f020014;
+        public static final int text=0x7f020015;
+        public static final int white_background=0x7f020016;
+        public static final int yes=0x7f020017;
+        public static final int younghero=0x7f020018;
     }
     public static final class id {
         public static final int action_library=0x7f090003;

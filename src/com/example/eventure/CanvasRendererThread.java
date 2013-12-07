@@ -2,7 +2,7 @@ package com.example.eventure;
 import android.graphics.Canvas;
 
 public class CanvasRendererThread extends Thread {
-	static final long FPS = 10;
+	static final long FPS = 60;
 	private StoryView view;
 	private boolean running = false;
 	
