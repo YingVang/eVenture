@@ -99,7 +99,9 @@ public class Library extends ListActivity{
 			break;
 			
 		case R.id.action_library:
-			Toast.makeText(this, "pressed library", Toast.LENGTH_LONG).show();
+			//Toast.makeText(this, "pressed library", Toast.LENGTH_LONG).show();
+			startActivity(new Intent(Library.this, AddToLib.class));
+			
 			break;
 			
 		case R.id.action_search:
